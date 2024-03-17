@@ -6,5 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tauri = "1.6.1"
+gtk = { version = "0.8.1", package = "gtk4", features = ["v4_12"] }
 wav = "1.0.0"
