@@ -3,14 +3,8 @@ use std::path;
 // use wav::header::Header;
 use wav::bit_depth::BitDepth;
 
-/// Struct to hold the data of a wave file
-pub struct WaveData {
-    pub data: Vec<f32>,
-    pub sample_rate: u32
-}
-
 /// Function that reads a wave file from a file and returns a WaveData struct
-pub fn read_wav_from_file(filepath: &str) -> Result<WaveData, String> {
+pub fn read_data_from_file(filepath: &str) -> Result<PureData, String> {
     
     let path = path::Path::new(filepath);
     if !path.exists() {
@@ -54,7 +48,7 @@ pub fn read_wav_from_file(filepath: &str) -> Result<WaveData, String> {
     println!("Successfully read file: {}", filepath);
 
     // Create a new WaveData struct and return it
-    Ok(WaveData {
+    Ok(PureData {
         data: raw_data,
         sample_rate: sample_rate
     })
