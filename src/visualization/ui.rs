@@ -20,7 +20,7 @@ pub fn build_ui(app: &Application) {
     
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("Test app")
+        .title("Cassie")
         .child(&outer_box)
         .build();
 
